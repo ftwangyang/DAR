@@ -1,0 +1,28 @@
+name: tsp
+use_cuda: True
+cuda_device_num: 0
+logger: no_logger
+val_filename: data/tsp100_val.pkl
+test_filename:
+load_checkpoint: pretrained/DAR.pt
+seed: 925
+params:
+  problem_size: 500
+  fixed_size: varying
+  multiple_width: 100
+  start_steps: 0
+  train_steps: 250000
+  inner_steps: 1
+  train_batch_size: 120
+  test_size: 1000
+  test_batch_size: 100
+  learning_rate: 0.0001
+  log_step: 5000
+  aug_factor: 1
+model_params:
+  embedding_dim: 128
+  encoder_layer_num: 6
+  head_num: 8
+  qkv_dim: 16
+  logit_clipping: 50
+  ff_hidden_dim: 512
