@@ -1,6 +1,6 @@
 #DAR(Distance-aware Attention Reshaping)
 
-A Novel Expertise Utilization Paradigm for Enhancing Generalization of Neural Solvers
+## A Novel Expertise Utilization Paradigm for Enhancing Generalization of Neural Solvers
 
 ## Test DAR on ATSP
 
