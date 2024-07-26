@@ -33,3 +33,8 @@ python test_tsplib.py
 ```bash
 python train.py
 ```
+
+## Acknowledgments
+
+* https://github.com/gaocrr/ELG
+* https://github.com/yd-kwon/POMO
