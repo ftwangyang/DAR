@@ -79,5 +79,5 @@ class TSPSolver:
         print(f"Average total distance for all instances: {avg_total_distance}")
 
 # Test
-solver = TSPSolver('./DAR/TSP/TSPLib1', repeat_times=1)
+solver = TSPSolver('./DAR/TSP/TSPLib', repeat_times=1)
 solver.test_on_tsplib()
