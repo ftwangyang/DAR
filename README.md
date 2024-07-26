@@ -38,3 +38,4 @@ python train.py
 
 * https://github.com/gaocrr/ELG
 * https://github.com/yd-kwon/POMO
+* https://github.com/RoyalSkye/Omni-VRP
