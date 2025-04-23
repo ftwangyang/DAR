@@ -288,13 +288,12 @@ class ATSP_Decoder(nn.Module):
         score_scaled = score / sqrt_embedding_dim
         # shape: (batch, pomo, job)
 
-        topk_indices = torch.topk(cur_dist, 20, dim=-1, largest=False).indices
-
+        topk_indices = torch.topk(cur_dist, 21, dim=-1, largest=False).indices
+        
+        topk_indices = topk_indices[:, :, 1:]
+        
         topk_scores = -torch.log(cur_dist.gather(-1, topk_indices))
 
-        inf_indices = torch.isinf(topk_scores)
-
-        topk_scores[inf_indices] = 0
 
         cur_dist = -cur_dist
 
