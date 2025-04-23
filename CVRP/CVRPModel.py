@@ -224,8 +224,9 @@ class CVRP_Decoder(nn.Module):
         score_scaled = score / sqrt_embedding_dim
 
         # 在problem维度上选取距离最短的前K个值，返回索引
-        topk_indices = torch.topk(cur_dist, 100, dim=-1, largest=False).indices
-
+        topk_indices = torch.topk(cur_dist, 101, dim=-1, largest=False).indices
+        #排除当前节点
+        topk_indices=topk_indices[:,:,1:]
         # 根据索引选取对应的距离值，计算对数函数，得到新的分数
         topk_scores = -torch.log(cur_dist.gather(-1, topk_indices))
         # 将其余距离数值取负数，保证索引位置不变
