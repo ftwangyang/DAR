@@ -220,8 +220,10 @@ class TSP_Decoder(nn.Module):
         score_scaled = score / sqrt_embedding_dim
         # shape: (batch, pomo, problem)
 
-        topk_indices = torch.topk(cur_dist, 50, dim=-1, largest=False).indices
-
+        topk_indices = torch.topk(cur_dist, 51, dim=-1, largest=False).indices
+        
+        topk_indices=topk_indices[:,:,1:]
+        
         topk_scores = -torch.log(cur_dist.gather(-1, topk_indices))
 
         cur_dist = -cur_dist
