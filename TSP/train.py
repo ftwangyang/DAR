@@ -153,7 +153,7 @@ if __name__ == "__main__":
     seed_everything(config['seed'])
     ts = datetime.datetime.utcnow() + datetime.timedelta(hours=+8)
     ts_name = f'-ts{ts.month}-{ts.day}-{ts.hour}-{ts.minute}-{ts.second}'
-    dir_path = 'weights/{}_{}'.format(name, ts_name)
+    dir_path = 'pretrained/{}_{}'.format(name, ts_name)
     os.mkdir(dir_path)
     log_config = config.copy()
     param_config = log_config['params'].copy()
