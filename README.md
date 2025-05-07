@@ -1,6 +1,15 @@
 # DAR(Distance-aware Attention Reshaping)
 
-## A Novel Expertise Utilization Paradigm for Enhancing Generalization of Neural Solvers
+## Distance-aware Attention Reshaping for Enhancing Generalization of Neural Solvers
+
+
+## Test DAR on VRPTW
+
+Under the DAR/VRPTW folder, run
+
+```bash
+python test.py
+```
 
 ## Test DAR on ATSP
 
@@ -25,9 +34,15 @@ Under the DAR/TSP folder, use the default settings in *config.yml*, and run
 python test_tsplib.py
 ```
 
+## Test DAR on KP
 
+Under the DAR/KP folder, run
 
-## Train DAR on TSP , CVRP, ATSP
+```bash
+python Inference.py
+```
+
+## Train DAR on TSP , CVRP, VRPTW, ATSP, KP
 
 
 ```bash
@@ -40,3 +55,4 @@ python train.py
 * https://github.com/yd-kwon/MatNet
 * https://github.com/yd-kwon/POMO
 * https://github.com/RoyalSkye/Omni-VRP
+* https://github.com/RoyalSkye/Routing-MVMoE
