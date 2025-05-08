@@ -3,6 +3,14 @@
 ## Distance-aware Attention Reshaping for Enhancing Generalization of Neural Solvers
 
 
+## Test DAR on CARP
+
+Under the DAR/CARP/POMO-GE-DAR folder, run
+
+```bash
+python test.py
+```
+
 ## Test DAR on VRPTW
 
 Under the DAR/VRPTW folder, run
@@ -42,7 +50,7 @@ Under the DAR/KP folder, run
 python Inference.py
 ```
 
-## Train DAR on TSP , CVRP, VRPTW, ATSP, KP
+## Train DAR on TSP, CVRP, VRPTW, ATSP, KP, CARP
 
 
 ```bash
